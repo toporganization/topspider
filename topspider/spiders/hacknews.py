@@ -14,7 +14,7 @@ class HacknewsSpider(scrapy.Spider):
     def parse(self, response):
         if 'news.ycombinator.com' in response.url:
             soup = BeautifulSoup(response.body, "lxml")
-            items = [(x[1].text, x[1].get('href')) for x in
+            items = [(x[1].text, x[1].get('href'),x[1]) for x in
                     filter(None, [
                         x.findChildren() for x in
                         soup.findAll('td', {'class': 'title'})[1::2]

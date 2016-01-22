@@ -13,3 +13,8 @@ class TopspiderItem(scrapy.Item):
     # name = scrapy.Field()
     title = scrapy.Field()
     link = scrapy.Field()
+
+class NdtvItem(scrapy.Item):
+    title = scrapy.Field()
+    link = scrapy.Field()
+    content = scrapy.Field()
