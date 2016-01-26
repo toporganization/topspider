@@ -14,6 +14,13 @@ BOT_NAME = 'topspider'
 SPIDER_MODULES = ['topspider.spiders']
 NEWSPIDER_MODULE = 'topspider.spiders'
 
+# start MySQL database configure setting
+MYSQL_HOST = ''
+MYSQL_DBNAME = 'topspider'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = ''
+# end of MySQL database configure setting
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'topspider (+http://www.yourdomain.com)'
@@ -61,9 +68,9 @@ NEWSPIDER_MODULE = 'topspider.spiders'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'topspider.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+        'topspider.pipelines.MysqlStoreNewsPipline': 300
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

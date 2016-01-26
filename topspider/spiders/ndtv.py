@@ -32,7 +32,7 @@ class NdtvSpider(scrapy.Spider):
                                 meta={'article':article})
                 except ValueError:
                     pass
-                yield article
+                    #yield article
             return
 
     def parse_content(self, response):
