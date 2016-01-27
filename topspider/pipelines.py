@@ -14,7 +14,7 @@ class MysqlStoreNewsPipline(object):
     def __init__(self):
         self.dbpool = adbapi.ConnectionPool('MySQLdb', 
                 host = '',
-                db = 'topspider',
+                db = 'topserver',
                 user = 'root',
                 passwd = '',
                 cursorclass = MySQLdb.cursors.DictCursor,
@@ -31,7 +31,7 @@ class MysqlStoreNewsPipline(object):
     #写入数据库
     def _do_upinsert(self, conn, item):
 
-        conn.execute('insert into news(`title`,`content`) values("%s", "%s")',
+        conn.execute('insert into api_new(`title`,`content`) values("%s", "%s")',
                 (item['title'], item['content']))
 
     #异常处理

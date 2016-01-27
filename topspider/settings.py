@@ -14,14 +14,6 @@ BOT_NAME = 'topspider'
 SPIDER_MODULES = ['topspider.spiders']
 NEWSPIDER_MODULE = 'topspider.spiders'
 
-# start MySQL database configure setting
-MYSQL_HOST = ''
-MYSQL_DBNAME = 'topspider'
-MYSQL_USER = 'root'
-MYSQL_PASSWD = ''
-# end of MySQL database configure setting
-
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'topspider (+http://www.yourdomain.com)'
 
